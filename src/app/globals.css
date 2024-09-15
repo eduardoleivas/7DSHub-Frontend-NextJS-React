@@ -2,26 +2,202 @@
 @tailwind components;
 @tailwind utilities;
 
+/* DARK THEME CONFIGS */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #1a1a1e;
+  --foreground: #ffffff;
+  --topbar: #353a41;
+  --container: #28282a;
+  --hovertoptext: #cccecf;
 }
 
-@media (prefers-color-scheme: dark) {
+/* LIGHT THEME CONFIGS */
+@media (prefers-color-scheme: light) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #e4e4e1;
+    --foreground: #313131;
+    --topbar: #cac4bf;
+    --container: #d6d6d5;
+    --hovertoptext: #000000;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+  position: relative;
+  top: 0;
+  max-width: 100vw;
+  height: calc(100vh - 3.5rem);
+  overflow-x: hidden;
+}
+
+header {
+  background: var(--topbar);
+}
+
+footer {
+  background: var(--topbar);
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  /* TYPOGRAPHY ASSETS */
+  .h1-bold {
+    @apply text-[36px] font-bold leading-[140%] tracking-tighter;
+  }
+
+  .h1-semibold {
+    @apply text-[36px] font-semibold leading-[140%] tracking-tighter;
+  }
+
+  .h2-bold {
+    @apply text-[30px] font-bold leading-[140%] tracking-tighter;
+  }
+
+  .h3-bold {
+    @apply text-[24px] font-bold leading-[140%] tracking-tighter;
+  }
+
+  .base-semibold {
+    @apply text-[16px] font-semibold leading-[140%] tracking-tighter;
+  }
+
+  .base-medium {
+    @apply text-[16px] font-medium leading-[140%];
+  }
+
+  .base-regular {
+    @apply text-[16px] font-normal leading-[140%];
+  }
+
+  .body-bold {
+    @apply text-[18px] font-bold leading-[140%];
+  }
+
+  .body-semibold {
+    @apply text-[18px] font-semibold leading-[140%];
+  }
+
+  .body-medium {
+    @apply text-[18px] font-medium leading-[140%];
+  }
+
+  .small-large-bold {
+    @apply text-[17px] font-bold leading-[140%] tracking-tighter;
+  }
+
+  .small-large-semibold {
+    @apply text-[17px] font-semibold leading-[140%] tracking-tighter;
+  }
+
+  .small-large {
+    @apply text-[17px] font-normal leading-[140%];
+  }
+
+  .small-semibold {
+    @apply text-[14px] font-semibold leading-[140%] tracking-tighter;
+  }
+
+  .small-medium {
+    @apply text-[14px] font-medium leading-[140%];
+  }
+
+  .small-regular {
+    @apply text-[14px] font-normal leading-[140%];
+  }
+
+  .subtle-semibold {
+    @apply text-[12px] font-semibold leading-[140%];
+  }
+
+  .tiny-large {
+    @apply text-[12px] font-medium leading-[140%];
+  }
+
+  .tiny-medium {
+    @apply text-[10px] font-medium leading-[140%];
+  }
+
+  /* UTILITIES */
+  .invert-white {
+    @apply invert brightness-0 transition;
+  }
+
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+
+  .flex-start {
+    @apply flex justify-start items-center;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    border-radius: 2px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #09090a;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #5c5c7b;
+    border-radius: 50px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #7878a3;
+  }
+
+  /* COLOR UTILITIES */
+  .color-foreground {
+    color: var(--foreground);
+  }
+  .color-hovertoptext {
+    color: var(--hovertoptext);
+  }
+
+  /* TOPBAR */
+  .topbar {
+    @apply flex relative items-center justify-between px-4 pt-1 z-[5];
+  }
+  .topbar-logo {
+    @apply w-[186px] h-[60px] z-[6];
+  }
+  .topbar-icon {
+    @apply w-[40px] h-[30px] pb-1;
+  }
+
+  .topbar-link {
+    @apply mx-2 color-foreground hover:color-hovertoptext;
+  }
+
+  /* MAIN CAROUSEL */
+  .slider-arrow {
+    @apply absolute z-[4] flex items-center justify-center w-8 h-8 text-white bg-black/50 rounded-full -translate-y-1/2 top-1/2 focus:outline-none;
+  }
+
+  .custom-dots {
+    @apply w-2 h-2 rounded-full bottom-2.5;
+  }
+
+  /* MAIN PAGE */
+  .main-container {
+    @apply flex flex-col mx-auto w-full sm:w-[70%] s1280:w-[60%] h-full;
+  }
+
+  .banner-container {
+    @apply bg-container overflow-x-hidden mx-auto my-4 w-full h-[10rem] s375:h-[12rem] s425:h-[13rem] s720:h-[15rem]
+    s768:h-[16rem] s1024:h-[21rem] s1280:h-[22rem] s1366:h-[24rem] s1440:h-[25rem] s1920:h-[33rem] sm:px-2 sm:rounded-lg;
+  }
+
+  .team {
+    @apply color-foreground;
   }
 }
