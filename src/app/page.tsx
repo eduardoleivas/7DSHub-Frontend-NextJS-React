@@ -1,6 +1,7 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Carousel } from "@/components/Carousel";
+import { Filterbar } from "@/components/Filterbar";
 
 export default function Home() {
   const images: string[] = [
@@ -15,8 +16,9 @@ export default function Home() {
       <div className="banner-container overflow-hidden">
         <Carousel images={images} />
       </div>
-      <div className="team"></div>
-      <div className="teams-container"></div>
+      <div className="teams-container">
+        <Filterbar />
+      </div>
     </div>
   );
 }

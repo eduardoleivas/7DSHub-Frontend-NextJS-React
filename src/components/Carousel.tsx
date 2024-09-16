@@ -48,7 +48,7 @@ export const Carousel = ({ images }: IProps) => {
         {images.map((image, index) => (
           <div
             key={index}
-            className="relative w-full h-[9rem] s375:h-[11rem] s425:h-[12rem] s720:h-[14rem] s768:h-[15rem]
+            className="relative w-full h-[7rem] s375:h-[8rem] s425:h-[10rem] s720:h-[14rem] s768:h-[15rem]
             s1024:h-[20rem] s1280:h-[21rem] s1366:h-[23rem] s1440:h-[24rem] s1920:h-[32rem] my-2"
           >
             <Image
@@ -56,7 +56,7 @@ export const Carousel = ({ images }: IProps) => {
               alt={`Carousel image ${index}`}
               layout="fill"
               objectFit="cover"
-              className="absolute inset-0"
+              className="absolute inset-0 sm:rounded"
             />
           </div>
         ))}
