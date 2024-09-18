@@ -21,6 +21,7 @@ export const Topbar = () => {
         "left-0",
         "p-6",
         "gap-10",
+        "z-20",
       ];
     } else {
       menuClasses = ["hidden", "md:flex"];

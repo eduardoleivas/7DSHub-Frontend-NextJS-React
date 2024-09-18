@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import { Tooltip } from "@nextui-org/tooltip";
 
+import { TeamItem } from "./TeamItem";
+
 export const Filterbar = () => {
   return (
     <div className="bar-container">
@@ -249,6 +251,18 @@ export const Filterbar = () => {
               height={40}
             />
           </Tooltip>
+        </div>
+      </div>
+      <div className="teams-column">
+        <h1 id="bar-title" className="mb-1 ">
+          TODOS OS TIMES
+        </h1>
+        <div className="all-teams">
+          <TeamItem />
+          <TeamItem />
+          <TeamItem />
+          <TeamItem />
+          <TeamItem />
         </div>
       </div>
     </div>

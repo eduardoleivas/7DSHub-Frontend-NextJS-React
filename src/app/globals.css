@@ -176,7 +176,7 @@ footer {
   }
 
   .filters {
-    @apply w-full mb-5 p-4 bg-topbar sm:rounded;
+    @apply w-full mb-5 px-4 sm:py-4 bg-topbar sm:rounded;
   }
 
   .filter-list {
@@ -210,6 +210,53 @@ footer {
   }
 
   .teams-container {
-    @apply bg-container h-[700px] w-full overflow-x-hidden sm:rounded-lg mb-4;
+    @apply bg-container w-full overflow-x-hidden sm:rounded-lg mb-4;
+  }
+
+  .teams-column {
+    @apply flex flex-col h-full w-full;
+  }
+
+  .all-teams {
+    @apply flex flex-1 flex-wrap h-full w-full justify-evenly gap-2;
+  }
+
+  /* TEAM OBJECT */
+  .team-item {
+    @apply flex flex-row bg-topbar w-full rounded items-center justify-center p-2
+    s720:flex-col s720:w-fit;
+  }
+
+  .team-divider {
+    @apply bg-gray-500 w-[1px] h-full m-[5px] s720:w-full s720:h-[1px];
+  }
+
+  .heroes-container {
+    @apply flex flex-wrap flex-1 h-full w-full items-center justify-evenly my-3;
+  }
+
+  .hero-portrait {
+    @apply relative;
+  }
+
+  .attribute-icon {
+    @apply absolute rounded-full top-[-0.5rem] right-[-0.5rem] bg-topbar p-0.5 z-10;
+  }
+
+  .character-divider {
+    @apply bg-gray-500 h-[1px] w-[80%] s720:my-3 s375:hidden s720:block;
+  }
+
+  /* CHARACTER BACKGROUNDS */
+  .character-bg-lr {
+    @apply bg-gradient-to-t from-slate-400 to-slate-100;
+  }
+
+  .character-bg-ur {
+    @apply bg-gradient-to-t from-rose-400 via-red-300 to-red-100;
+  }
+
+  .character-bg-ssr {
+    @apply bg-gradient-to-t from-cyan-400 to-cyan-100;
   }
 }
