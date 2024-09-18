@@ -1,6 +1,6 @@
 REACTJS NEXTJS TYPESCRIPT TAILWINDCSS LUCIDE-REACT REACT-SLICK NEXTUI FRAMER-MOTION
 
-To-do Readme
+To-do Readme.
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
